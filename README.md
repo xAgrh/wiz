@@ -1,4 +1,2 @@
-wiz
-===
+## Wiz-Art
 
-wiz-art
