@@ -26,5 +26,9 @@ module SampleApp
     # config.i18n.default_locale = :de
     config.assets.precompile += %w(*.png *.jpg *.jpeg *.gif)
     I18n.enforce_available_locales = true
+
+    config.sass.load_paths << File.expand_path('../../lib/assets/stylesheets/')
+    config.sass.load_paths << File.expand_path('../../vendor/assets/stylesheets/')
+    config.sass.load_paths << File.expand_path('../../vendor/assets/plugins/')
   end
 end

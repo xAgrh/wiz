@@ -1,7 +1,21 @@
 
-@import "bootstrap-sprockets";
-@import "bootstrap";
-@import "custom";
+
+// @import "custom";
+
+// CSS Global Compulsory
+@import "bootstrap/css/bootstrap.min";
+@import "style";
+@import "headers/header1";
+@import "bootstrap/css/bootstrap-responsive.min";
+@import "style_responsive";
+
+// CSS Implementing Plugins
+@import "font-awesome/css/font-awesome";
+@import "flexslider/flexslider";
+@import "parallax-slider/css/parallax-slider";
+
+// CSS Theme
+@import "themes/default";
 
 
 /*
