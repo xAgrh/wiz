@@ -25,10 +25,14 @@
 
 //= require ../../../vendor/assets/plugins/parallax-slider/js/modernizr
 //= require ../../../vendor/assets/plugins/parallax-slider/js/jquery.cslider
+//= require ../../../vendor/assets/plugins/gmap/gmap.js
+//= require ../../../vendor/assets/plugins/portfolioSorting/js/jquery.quicksand.js
+//= require ../../../vendor/assets/plugins/portfolioSorting/js/sorting.js
 //= require ../../../vendor/assets/plugins/back-to-top
 
 //= require ../../../vendor/assets/javascripts/app.js
 //= require ../../../vendor/assets/javascripts/pages/index.js
+//= require ../../../vendor/assets/javascripts/pages/contact.js
 
 
 jQuery(document).ready(function() {
