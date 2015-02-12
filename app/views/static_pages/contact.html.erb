@@ -24,15 +24,17 @@
     <div class="span9">
       <div class="headline"><h3>Контакты</h3></div>
       <p>Мы находимся на территории Московского радиотехнического завода.</p><br />
-      <form />
-      <label>Имя</label>
-      <input type="text" class="span7 border-radius-none" />
-      <label>Email <span class="color-red">*</span></label>
-      <input type="text" class="span7 border-radius-none" />
-      <label>Ваше сообщение</label>
-      <textarea rows="8" class="span10"></textarea>
-      <p><button type="submit" class="btn-u">Отправить сообщение</button></p>
-      </form>
+      <% form_for :email, :url => { :controller => 'static_pages', :action => 'contact' } do |f| %>
+          <%= f.label :name %><br />
+          <%= f.text_field :name, :size => 60 %><br />
+          <%= f.label :address %><br />
+          <%= f.text_field :address, :size => 60 %><br />
+          <%= f.label :subject %><br />
+          <%= f.text_field :subject, :size => 60 %><br />
+          <%= f.label :body %><br />
+          <%= f.text_area :body, :rols => 10, :cols => 60 %><br />
+          <%= submit_tag "Send Email "%>
+      <% end %>
     </div><!--/span9-->
 
     <div class="span3">

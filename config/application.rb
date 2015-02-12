@@ -30,5 +30,21 @@ module SampleApp
     config.sass.load_paths << File.expand_path('../../lib/assets/stylesheets/')
     config.sass.load_paths << File.expand_path('../../vendor/assets/stylesheets/')
     config.sass.load_paths << File.expand_path('../../vendor/assets/plugins/')
+
+
+    config.action_mailer.delivery_method = :smtp
+    config.action_mailer.smtp_settings = {
+        :address => 'localhost',
+        :domain => 'wiz-art.me',
+        :port => 25,
+        :authentication => :login,
+        :user_name => "smtp_username",
+        :password => "smtp_password"
+    }
+
+    config.action_mailer.perform_deliveries = true
+    config.action_mailer.raise_delivery_errors = false
+    # config.action_mailer.default_charset = "utf-8"
+
   end
 end
