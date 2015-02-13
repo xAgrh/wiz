@@ -16,7 +16,7 @@ class StaticPagesController < ApplicationController
   end
   
   def contact
-    Emailer::deliver_contact_email(params[:email])
+    Emailer.contact_email(params[:email])
   end
 
 

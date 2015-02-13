@@ -32,14 +32,12 @@ module SampleApp
     config.sass.load_paths << File.expand_path('../../vendor/assets/plugins/')
 
 
-    config.action_mailer.delivery_method = :smtp
+    config.action_mailer.delivery_method = :smtp  # Changing settings for mandrill
     config.action_mailer.smtp_settings = {
-        :address => 'localhost',
-        :domain => 'wiz-art.me',
-        :port => 25,
-        :authentication => :login,
-        :user_name => "smtp_username",
-        :password => "smtp_password"
+        address: 'smtp.mandrillapp.com',
+        port: 587,
+        user_name: ENV['MANDRILL_USERNAME'],
+        password: ENV['MANDRILL_APIKEY']
     }
 
     config.action_mailer.perform_deliveries = true
